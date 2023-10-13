@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #cal{
+            width: 450px;
+            height: 500px;
+            border: 5px solid black;
+            margin :auto;
+            background-color: rgba(13, 13, 13, 0.938);
+
+           }
+           #txt{
+            margin: 30px;
+            width: 360px;
+            border: 1px solid rgba(255, 255, 255, 0.657);
+            height: 40px;
+            padding: 15px;
+            color: rgb(245, 238, 238);
+            font-size: 40px;
+            background-color: rgba(158, 167, 130, 0.617);
+           }
+           button{
+            border: 1px solid rgb(51, 46, 46);
+            padding: 10px;
+            margin: 8px;
+            width: 70px;
+            height: 50px;
+            border-radius: 10px;
+            font-size: 30px;
+            background-color: rgba(95, 93, 93, 0.865);
+            color: white;
+            box-shadow: 4px 4px 5px black;
+           }
+           #q1{
+            width: 70px;
+            height: 120px;
+        }
+           #myclr{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(38, 96, 101, 0.81);
+           }
+
+           #mycl1{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(38, 96, 101, 0.81);
+           }
+
+           #mycl2{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(140, 96, 103, 0.81);
+           }
+
+           #mycl3{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(140, 96, 103, 0.81);
+           }
+           #mycl4{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(88, 1, 16, 0.81);
+           }
+           #mycl5{
+            width: 70px;
+            height: 40px;
+            font-size: 20px;
+            background-color: rgba(88, 1, 16, 0.81);
+           }
+        
+        
+    </style>
+    <script>
+        function myvel(){
+            let mystr =document.getElementById('txt').value;
+            let ans=mystr.substr(0, mystr.length-1);
+            document.getElementById('txt').value=ans;
+        }
+    </script>
+</head> 
+<body>
+
+        <div id="cal">
+
+            <input type="text" id="txt" placeholder="0">
+
+            <table>
+
+                <tr>
+                   <td><button onclick="document.getElementById('txt').value=''" id="myclr">CLR</button></td> 
+                   <td><button onclick="document.getElementById('txt').value=''" id="mycl1">CK</button></td> 
+                   <td><button onclick="document.getElementById('txt').value=''" id="mycl2">SLC</button></td> 
+                   <td colspan="1"><button onclick="document.getElementById('txt').value=''" id="mycl4" ></button></td>
+                   <td ><button onclick="document.getElementById('txt').value=''" id="mycl5" ></button></td>
+                </tr>
+                
+                <tr>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no7').value" value="7" id="no7">7</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no8').value" value="8" id="no8">8</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no9').value" value="9" id="no9">9</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('noper').value" value="%" id="noper">%</button></td>
+                    <td><button onclick="myvel()">X</button></td>
+                </tr>
+                <tr>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no4').value" value="4" id="no4">4</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no5').value" value="5" id="no5">5</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no6').value" value="6" id="no6">6</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('nomulti').value" value="*" id="nomulti">*</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('nodive').value" value="/" id="nodive">/</button></td>
+                </tr>
+                <tr >
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no1').value" value="1" id="no1">1</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no2').value" value="2" id="no2">2</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no3').value" value="3" id="no3">3</button></td>
+                    <td ><button onclick="document.getElementById('txt').value+=document.getElementById('noplus').value" value="+" id="noplus">+</button></td>
+                    <td rowspan="2"><button onclick="document.getElementById('txt').value=eval(document.getElementById('txt').value)" id="q1">=</button></td>
+                    
+                    
+                </tr>
+                <tr>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no0').value" value="0" id="no0">0</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('no00').value" value="00" id="no00">00</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('nodot').value" value="." id="nodot">.</button></td>
+                    <td><button onclick="document.getElementById('txt').value+=document.getElementById('nomin').value" value="-" id="nomin">-</button></td>
+                </tr>
+            </table>
+            
+        </div>
+</body>
+</html>
